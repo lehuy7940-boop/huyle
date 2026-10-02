@@ -1,0 +1,16 @@
+services:
+  backend:
+    image: lehuy7940/mern-backend:1.0
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGODB_URI=${MONGODB_URI}
+    networks:
+      default:
+        aliases:
+          - mern-backend
+
+  frontend:
+    image: lehuy7940/mern-frontend:2.0
+    ports:
+      - "5173:5173"
